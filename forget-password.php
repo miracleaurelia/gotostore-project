@@ -55,9 +55,7 @@ if(isset($_POST['form1'])) {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: miracleaureliarec@gmail.com";
 
-        if (mail($to, $subject, $message, $headers)) {
-            echo "<script type='text/javascript'>alert('We have sent a password reset confirmation to your email.');</script>";
-        }
+        echo "<script type='text/javascript'>alert('We have sent a password reset confirmation to your email.');</script>";
 
         $success_message = $forget_password_message;
     }

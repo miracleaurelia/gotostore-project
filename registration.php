@@ -182,10 +182,6 @@ if (isset($_POST['form1'])) {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: miracleaureliarec@gmail.com";
 
-        if (mail($to, $subject, $message, $headers)) {
-            echo "<script type='text/javascript'>alert('We have sent a verification email. Please verify your account soon');</script>";
-        }
-
         unset($_POST['cust_name']);
         unset($_POST['cust_uname']);
         unset($_POST['cust_email']);
@@ -195,7 +191,7 @@ if (isset($_POST['form1'])) {
         unset($_POST['cust_state']);
         unset($_POST['cust_zip']);
 
-        $success_message = "Your registration is completed. Please check your email address to follow the process to confirm your registration.";
+        $success_message = "Your registration is completed. You can now login.";
     }
 }
 ?>

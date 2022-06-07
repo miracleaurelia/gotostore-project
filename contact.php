@@ -116,13 +116,6 @@ if(isset($_POST['form_contact']))
         </table>
         </body></html>
         ';
-        $headers = 'From: ' . $visitor_email . "\r\n" .
-                   'Reply-To: ' . $visitor_email . "\r\n" .
-                   'X-Mailer: PHP/' . phpversion() . "\r\n" . 
-                   "MIME-Version: 1.0\r\n" . 
-                   "Content-Type: text/html; charset=ISO-8859-1\r\n";
-              
-        mail($to_admin, $subject, $message, $headers); 
         
         $success_message = $receive_email_thank_you_message;
 

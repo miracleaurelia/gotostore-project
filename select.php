@@ -246,22 +246,21 @@ foreach ($result as $row) {
                                             $statement = $pdo->prepare("INSERT INTO tbl_subscriber (subs_email,subs_date,subs_date_time,subs_hash,subs_active) VALUES (?,?,?,?,?)");
                                             $statement->execute(array($_POST['email_subscribe'], $current_date, $current_date_time, $key, 0));
 
-                                            $to = $_POST['email_subscribe'];
-                                            $subject = 'Subscriber Email Confirmation';
-                                            $verification_url = 'http://127.0.0.1/gotostore-php/verify.php?email=' . $to . '&key=' . $key;
+                                            // $to = $_POST['email_subscribe'];
+                                            // $subject = 'Subscriber Email Confirmation';
+                                            // $verification_url = 'http://127.0.0.1/gotostore-php/verify.php?email=' . $to . '&key=' . $key;
 
-                                            $message = 'Thanks for your interest to subscribe our newsletter!<br><br>
-                                            Please click this link to confirm your subscription:
-                                            ' . $verification_url . '<br><br>
-                                            This link will be active only for 24 hours.';
+                                            // $message = 'Thanks for your interest to subscribe our newsletter!<br><br>
+                                            // Please click this link to confirm your subscription:
+                                            // ' . $verification_url . '<br><br>
+                                            // This link will be active only for 24 hours.';
 
-                                            $headers = "MIME-Version: 1.0" . "\r\n";
-                                            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                                            $headers .= "From: miracleaureliarec@gmail.com";
+                                            // $headers = "MIME-Version: 1.0" . "\r\n";
+                                            // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                                            // $headers .= "From: miracleaureliarec@gmail.com";
 
-                                            if (mail($to, $subject, $message, $headers)) {
-                                                $success_message1 = "Please check your email and confirm your subscription.";
-                                            }
+                                            $success_message1 = "You are now subbed.";
+                                            
                                         }
                                     }
                                 }

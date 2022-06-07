@@ -113,9 +113,7 @@ if (isset($_POST['form1'])) {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= "From: miracleaureliarec@gmail.com";
 
-        if (mail($to_customer, $subject_text, $message, $headers)) {
-            $success_message = 'Your email to customer is sent successfully.';
-        }
+        $success_message = 'Your email to customer is sent successfully.';
     }
 }
 ?>

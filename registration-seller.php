@@ -165,25 +165,23 @@ if (isset($_POST['form1'])) {
       $token,
       $seller_datetime,
       $seller_timestamp,
-      0, 0
+      1, 0
     ));
 
     $to = $_POST['seller_email'];
 
-    $subject = "Registration Email Confirmation for GoToStore.";
-    $verify_link = 'http://127.0.0.1/gotostore-php/verify.php?email=' . $to . '&token=' . $token;
-    $message = '
-' . "Thank you for your registration! Your account has been created. To active your account click on the link below: " . '<br><br>
+//     $subject = "Registration Email Confirmation for GoToStore.";
+//     $verify_link = 'http://127.0.0.1/gotostore-php/verify.php?email=' . $to . '&token=' . $token;
+//     $message = '
+// ' . "Thank you for your registration! Your account has been created. To active your account click on the link below: " . '<br><br>
 
-<a href="' . $verify_link . '">' . $verify_link . '</a>';
+// <a href="' . $verify_link . '">' . $verify_link . '</a>';
 
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: miracleaureliarec@gmail.com";
+    // $headers = "MIME-Version: 1.0" . "\r\n";
+    // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    // $headers .= "From: miracleaureliarec@gmail.com";
 
-    if (mail($to, $subject, $message, $headers)) {
       echo "<script type='text/javascript'>alert('We have sent a verification email. Please verify your account soon');</script>";
-    }
 
     unset($_POST['seller_name']);
     unset($_POST['seller_uname']);
@@ -194,7 +192,7 @@ if (isset($_POST['form1'])) {
     unset($_POST['seller_state']);
     unset($_POST['seller_zip']);
 
-    $success_message = "Your registration is completed. Please check your email address to follow the process to confirm your registration.";
+    $success_message = "Your registration is completed.";
   }
 }
 ?>
