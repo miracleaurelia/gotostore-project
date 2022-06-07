@@ -166,21 +166,21 @@ if (isset($_POST['form1'])) {
             $token,
             $cust_datetime,
             $cust_timestamp,
-            0, 0
+            1, 0
         ));
 
-        $to = $_POST['cust_email'];
+//         $to = $_POST['cust_email'];
 
-        $subject = "Registration Email Confirmation for GoToStore.";
-        $verify_link = 'http://127.0.0.1/gotostore-php/verify.php?email=' . $to . '&token=' . $token;
-        $message = '
-' . "Thank you for your registration! Your account has been created. To active your account click on the link below: " . '<br><br>
+//         $subject = "Registration Email Confirmation for GoToStore.";
+//         $verify_link = 'http://127.0.0.1/gotostore-php/verify.php?email=' . $to . '&token=' . $token;
+//         $message = '
+// ' . "Thank you for your registration! Your account has been created. To active your account click on the link below: " . '<br><br>
 
-<a href="' . $verify_link . '">' . $verify_link . '</a>';
+// <a href="' . $verify_link . '">' . $verify_link . '</a>';
 
-        $headers = "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: miracleaureliarec@gmail.com";
+//         $headers = "MIME-Version: 1.0" . "\r\n";
+//         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+//         $headers .= "From: miracleaureliarec@gmail.com";
 
         unset($_POST['cust_name']);
         unset($_POST['cust_uname']);
@@ -192,6 +192,8 @@ if (isset($_POST['form1'])) {
         unset($_POST['cust_zip']);
 
         $success_message = "Your registration is completed. You can now login.";
+        header('location: logout.php');
+        exit;
     }
 }
 ?>
