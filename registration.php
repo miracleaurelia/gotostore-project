@@ -192,7 +192,7 @@ if (isset($_POST['form1'])) {
         unset($_POST['cust_zip']);
 
         $success_message = "Your registration is completed. You can now login.";
-        header('location: logout.php');
+        header('location: login.php');
         exit;
     }
 }
