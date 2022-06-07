@@ -2,10 +2,18 @@
 ini_set('date.timezone', 'Asia/Jakarta');
 
 if(isset($_POST['get_option']) && isset($_POST['page'])) {
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $database = "ecommerceweb";
+    // development connection
+    // $host = "localhost";
+    // $user = "root";
+    // $pass = "";
+    // $database = "ecommerceweb";
+
+    // remote database connection
+    $host = "remotemysql.com";
+    $user = "pNLoi1LCD4";
+    $pass = "8TF1bvejnw";
+    $database = "pNLoi1LCD4";
+
     $limit = 5;
     $page = ($_POST['page'] - 1) * $limit;
     $connection = mysqli_connect($host, $user, $pass, $database);

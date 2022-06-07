@@ -3,10 +3,17 @@ ini_set('error_reporting', E_ALL);
 
 date_default_timezone_set('Asia/Jakarta');
 
-$dbhost = 'localhost';
-$dbname = 'ecommerceweb';
-$dbuser = 'root';
-$dbpass = '';
+// development connection
+// $dbhost = "localhost";
+// $dbuser = "root";
+// $dbpass = "";
+// $dbname = "ecommerceweb";
+
+// remote database connection
+$dbhost = "remotemysql.com";
+$dbuser = "pNLoi1LCD4";
+$dbpass = "8TF1bvejnw";
+$dbname = "pNLoi1LCD4";
 
 define("ADMIN_URL", "admin" . "/");
 

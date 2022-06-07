@@ -1,10 +1,18 @@
 <?php
-    function setUpDBConnection(){
-        $hostName = "localhost";
-        $userName = "root";
-        $password = "";
-        $database = "ecommerceweb";
-        $connection = mysqli_connect($hostName, $userName, $password, $database);
+    function setUpDBConnection() {
+        // development connection
+        // $host = "localhost";
+        // $user = "root";
+        // $pass = "";
+        // $database = "ecommerceweb";
+
+        // remote database connection
+        $host = "remotemysql.com";
+        $user = "pNLoi1LCD4";
+        $pass = "8TF1bvejnw";
+        $database = "pNLoi1LCD4";
+
+        $connection = mysqli_connect($host, $user, $pass, $database);
         return $connection;
    }
 ?>
